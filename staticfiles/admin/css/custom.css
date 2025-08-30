@@ -1,0 +1,59 @@
+/* static/admin/css/custom.css */
+/* Custom styles for the admin interface */
+
+/* Green color scheme to match IHICL branding */
+#header {
+    background: #085e2b;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #085e2b;
+}
+
+div.breadcrumbs {
+    background: #0a7e3d;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #085e2b;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #0a7e3d;
+}
+
+/* Custom dashboard styles */
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    flex: 1;
+    min-width: 250px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard-card h3 {
+    margin: 0 0 10px 0;
+    color: #495057;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.dashboard-card .stat {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #085e2b;
+}
