@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Frequently Asked Questions - IHICL Investment{% endblock %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Frequently Asked Questions</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-white">Pages</a></li>
+                <li class="breadcrumb-item active text-primary">FAQ</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq-section py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="faq-left pe-lg-4">
+                        <div class="section-title text-left">
+                            <h2 class="section-title__title mb-4">Frequently Asked Questions</h2>
+                        </div>
+                        <p class="faq-text mb-4">
+                            Every great investment begins with a conversation. Whether you're ready to invest, exploring partnership opportunities, or simply curious about our model, we're here to listen. Let's discuss how we can grow together.
+                        </p>
+                        <a href="{% url 'contact' %}" class="thm-btn faq-btn">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="faq-right">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is IHICL Industrial Farm Settlement?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        IHICL is an agricultural investment company focused on large-scale farm settlements that provide secure investment opportunities and sustainable food production.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do investors benefit?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Investors enjoy attractive returns, transparency in operations, and the opportunity to contribute to food security and job creation.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Is this investment secure?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes. Our model is based on industrial-scale projects backed by modern technology, experienced management, and strong governance.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Who can invest?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Both individuals and institutions looking for secure, sustainable, and profitable opportunities in agriculture.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        How do I get started?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Simply contact us via our website, phone, or email, and our team will guide you through the investment process.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional FAQ Items -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        What is the minimum investment amount?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We offer various investment tiers to accommodate different investor profiles. Please contact our team for specific details about minimum investment requirements.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        How often are returns distributed?
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Returns are typically distributed quarterly, with detailed reports provided to all investors. The specific distribution schedule depends on the investment product chosen.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        What makes IHICL different from other agricultural investments?
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        IHICL combines industrial-scale farming with sustainable practices, advanced technology, and community development initiatives. Our integrated approach ensures both financial returns and positive social impact.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- CTA Section Start -->
+    
+    <!-- CTA Section End -->
+
+    <style>
+        .faq-section {
+            background-color: #f8f9fa;
+        }
+        
+        .section-title__title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #085e2b;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .section-title__title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #085e2b;
+        }
+        
+        .faq-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #6c757d;
+        }
+        
+        .thm-btn {
+            background-color: #085e2b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .thm-btn:hover {
+            background-color: #064821;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 1.25rem;
+            color: #085e2b;
+            background-color: white;
+            border: 1px solid rgba(0,0,0,0.125);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            color: #085e2b;
+            background-color: rgba(8, 94, 43, 0.1);
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,0.125);
+        }
+        
+        .accordion-button:focus {
+            border-color: #085e2b;
+            box-shadow: 0 0 0 0.25rem rgba(8, 94, 43, 0.25);
+        }
+        
+        .accordion-body {
+            padding: 1.25rem;
+            background-color: white;
+            border: 1px solid rgba(0,0,0,0.125);
+            border-top: none;
+        }
+        
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23085e2b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23085e2b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        
+        @media (max-width: 992px) {
+            .faq-left {
+                margin-bottom: 3rem;
+            }
+            
+            .section-title__title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize tooltips if needed
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Make phone numbers clickable
+            const phoneBtn = document.querySelector('a[href^="tel:"]');
+            if (phoneBtn) {
+                phoneBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const phoneNumber = this.getAttribute('href').replace('tel:', '');
+                    window.location.href = `tel:${phoneNumber}`;
+                });
+            }
+        });
+    </script>
+{% endblock %}

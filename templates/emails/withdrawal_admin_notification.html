@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Withdrawal Request Received</title>
+</head>
+<body>
+    <h2>New Withdrawal Request Received</h2>
+    <p>A new withdrawal request has been submitted through the IHICL portal:</p>
+    
+    <h3>Investor Details:</h3>
+    <ul>
+        <li><strong>Name:</strong> {{ user.get_full_name|default:"Unknown" }}</li>
+        <li><strong>Email:</strong> {{ user.email|default:"Not provided" }}</li>
+        <li><strong>Phone:</strong> {{ investor_profile.telephone|default:"Not provided" }}</li>
+        <li><strong>Address:</strong> {{ investor_profile.address|default:"Not provided" }}</li>
+    </ul>
+    
+    <h3>Withdrawal Details:</h3>
+    <ul>
+        <li><strong>Amount:</strong> ₦{{ amount|floatformat:2|default:"0.00" }}</li>
+        <li><strong>Transaction Reference:</strong> {{ transaction.reference|default:"Not provided" }}</li>
+        <li><strong>Date:</strong> {% now "F j, Y, g:i a" %}</li>
+    </ul>
+    
+    <p>Please process this withdrawal request promptly.</p>
+    
+    <p><em>This is an automated message from the IHICL Investment Portal.</em></p>
+</body>
+</html>

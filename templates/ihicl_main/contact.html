@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us - IHICL Investment{% endblock %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-primary">Contact</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid contact bg-light py-5">
+        <div class="container py-5">
+            <!-- Display Django messages -->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            <!-- Direct Contacts Section -->
+            <div class="row mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="text-primary">Direct Contacts</h2>
+                    <p class="lead">We welcome investment discussions, site visits, and partnership proposals.</p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto mb-3">
+                                <i class="fa fa-user text-white"></i>
+                            </div>
+                            <h5 class="card-title">Niyi Murele</h5>
+                            <p class="card-text">
+                                UK<br>
+                                <strong>+44 7930 313 159</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto mb-3">
+                                <i class="fa fa-user text-white"></i>
+                            </div>
+                            <h5 class="card-title">Oladimeji Olaobaju</h5>
+                            <p class="card-text">
+                                Europe<br>
+                                <strong>+49 177 215 2006</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto mb-3">
+                                <i class="fa fa-user text-white"></i>
+                            </div>
+                            <h5 class="card-title">Engr. Kehinde Awoyele</h5>
+                            <p class="card-text">
+                                Nigeria<br>
+                                <strong>+234 803 360 8535</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto mb-3">
+                                <i class="fa fa-user text-white"></i>
+                            </div>
+                            <h5 class="card-title">HRM, Oba Adetayo Oladele</h5>
+                            <p class="card-text">
+                                USA<br>
+                                <strong>+1 (614) 209‑6537</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="contact-item">
+                        <div class="pb-5">
+                            <h4 class="text-primary">Contact Us</h4>
+                            <h1 class="display-4 mb-4">Get In Touch With Us</h1>
+                            <p class="mb-0">Have questions about our investment services or want to discuss potential opportunities? Our team is here to help you with all your financial needs. Reach out to us through any of the channels below or fill out the contact form.</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Addresses</h4>
+                                <p class="mb-0">Ile-ife, Osun state,Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Mobile</h4>
+                                <p class="mb-0">+234980009630</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Email</h4>
+                                <p class="mb-0">info@ifetheritageinvestment.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <form id="contact-form" method="post" novalidate>
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control {% if form.name.errors %}is-invalid{% endif %}" id="name" name="name" placeholder="Your Name" value="{% if form.name.value %}{{ form.name.value }}{% endif %}" required>
+                                    <label for="name">Your Name</label>
+                                    {% if form.name.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.name.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <div class="invalid-feedback">Please provide your name.</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}" id="email" name="email" placeholder="Your Email" value="{% if form.email.value %}{{ form.email.value }}{% endif %}" required>
+                                    <label for="email">Your Email</label>
+                                    {% if form.email.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control {% if form.phone.errors %}is-invalid{% endif %}" id="phone" name="phone" placeholder="Phone" value="{% if form.phone.value %}{{ form.phone.value }}{% endif %}">
+                                    <label for="phone">Your Phone</label>
+                                    {% if form.phone.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.phone.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <select class="form-select {% if form.subject.errors %}is-invalid{% endif %}" id="subject" name="subject">
+                                        <option value="General Inquiry" {% if form.subject.value == "General Inquiry" %}selected{% endif %}>General Inquiry</option>
+                                        <option value="Investment Opportunities" {% if form.subject.value == "Investment Opportunities" %}selected{% endif %}>Investment Opportunities</option>
+                                        <option value="Account Support" {% if form.subject.value == "Account Support" %}selected{% endif %}>Account Support</option>
+                                        <option value="Partnership" {% if form.subject.value == "Partnership" %}selected{% endif %}>Partnership</option>
+                                    </select>
+                                    <label for="subject">Subject</label>
+                                    {% if form.subject.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.subject.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control {% if form.message.errors %}is-invalid{% endif %}" placeholder="Leave a message here" id="message" name="message" style="height: 160px" required>{% if form.message.value %}{{ form.message.value }}{% endif %}</textarea>
+                                    <label for="message">Message</label>
+                                    {% if form.message.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.message.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <div class="invalid-feedback">Please provide a message.</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            
+                            <!-- Add reCAPTCHA field -->
+                            <div class="col-12">
+                                {{ form.captcha }}
+                                {% if form.captcha.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.captcha.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit" id="submit-button">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded h-100">
+                        <iframe class="rounded-top w-100" 
+                        style="height: 500px; margin-bottom: -6px;" src="https://maps.google.com/maps?q=Ile-ife%2C%20Osun%2C%20Nigeria&#038;t=m&#038;z=12&#038;output=embed&#038;iwloc=near" 
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="d-flex align-items-center justify-content-center bg-teal-dark rounded-bottom p-4">
+                            <div class="d-flex">
+                                <a class="btn btn-dark btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            // Add Bootstrap validation styling
+            contactForm.addEventListener('submit', function(e) {
+                if (!contactForm.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                
+                contactForm.classList.add('was-validated');
+            });
+            
+            // Auto-hide alerts after 5 seconds
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                }, 5000);
+            });
+            
+            // Make phone numbers clickable
+            document.querySelectorAll('.card-text strong').forEach(phone => {
+                phone.style.cursor = 'pointer';
+                phone.addEventListener('click', function() {
+                    const phoneNumber = this.textContent.trim();
+                    window.location.href = `tel:${phoneNumber}`;
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .was-validated .form-control:invalid,
+        .was-validated .form-select:invalid {
+            border-color: #dc3545;
+        }
+        
+        .was-validated .form-control:valid,
+        .was-validated .form-select:valid {
+            border-color: #198754;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        
+        .form-control.is-invalid, .form-select.is-invalid {
+            border-color: #dc3545;
+        }
+        
+        /* Direct Contacts Styling */
+        .card {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-text strong {
+            color: #085e2b;
+        }
+        
+        .card-text strong:hover {
+            text-decoration: underline;
+        }
+        
+        /* reCAPTCHA styling */
+        .g-recaptcha {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Adjust reCAPTCHA for mobile */
+        @media (max-width: 576px) {
+            .g-recaptcha {
+                transform: scale(0.85);
+                transform-origin: 0 0;
+            }
+        }
+    </style>
+{% endblock %}

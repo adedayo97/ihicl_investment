@@ -1,0 +1,561 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}Investment Dashboard - IHICL Investment{% endblock %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Investment Dashboard</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-primary">Dashboard</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Hidden element to pass performance data to JavaScript -->
+    {% if performance_data %}
+    <div id="performance-data" 
+         data-labels='{{ performance_labels|safe }}'
+         data-values='{{ performance_values|safe }}'
+         style="display: none;"></div>
+    {% endif %}
+    <!-- Hidden flags for modal visibility -->
+    <div id="dashboard-flags" 
+         data-profile-errors="{% if form and form.errors %}1{% else %}0{% endif %}"
+         data-kin-errors="{% if kin_form_errors %}1{% else %}0{% endif %}"
+         style="display: none;"></div>
+
+    <!-- Profile Update Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">Update Your Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="{% url 'update_profile' %}">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <select class="form-select" id="title" name="title">
+                                <option value="">Select Title</option>
+                                <option value="Mr" {% if user.investor_profile.title == "Mr" %}selected{% endif %}>Mr</option>
+                                <option value="Mrs" {% if user.investor_profile.title == "Mrs" %}selected{% endif %}>Mrs</option>
+                                <option value="Ms" {% if user.investor_profile.title == "Ms" %}selected{% endif %}>Ms</option>
+                                <option value="Dr" {% if user.investor_profile.title == "Dr" %}selected{% endif %}>Dr</option>
+                                <option value="Prof" {% if user.investor_profile.title == "Prof" %}selected{% endif %}>Prof</option>
+                                <option value="Other" {% if user.investor_profile.title == "Other" %}selected{% endif %}>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" id="otherTitleContainer">
+                            <label for="other_title" class="form-label">Specify Title</label>
+                            <input type="text" class="form-control" id="other_title" name="other_title" 
+                                   value="{{ user.investor_profile.other_title|default:'' }}" 
+                                   placeholder="Enter your title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="first_name" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telephone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="telephone" name="telephone" value="{{ user.investor_profile.telephone|default:'' }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" name="address" rows="2">{{ user.investor_profile.address|default:'' }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" name="country" value="{{ user.investor_profile.country|default:'' }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" name="city" value="{{ user.investor_profile.city|default:'' }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" name="state" value="{{ user.investor_profile.state|default:'' }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="postal_code" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="postal_code" name="postal_code" value="{{ user.investor_profile.postal_code|default:'' }}">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next of Kin Modal -->
+    <div class="modal fade" id="nextOfKinModal" tabindex="-1" aria-labelledby="nextOfKinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nextOfKinModalLabel">
+                        {% if next_of_kin %}Update{% else %}Add{% endif %} Next of Kin
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="{% url 'update_next_of_kin' %}">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="kin_full_name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="kin_full_name" name="kin_full_name" 
+                                   value="{{ next_of_kin.full_name|default:'' }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="kin_relationship" class="form-label">Relationship</label>
+                            <input type="text" class="form-control" id="kin_relationship" name="kin_relationship" 
+                                   value="{{ next_of_kin.relationship|default:'' }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="kin_email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="kin_email" name="kin_email" 
+                                   value="{{ next_of_kin.email|default:'' }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="kin_phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="kin_phone" name="kin_phone" 
+                                   value="{{ next_of_kin.phone|default:'' }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="kin_address" class="form-label">Address</label>
+                            <textarea class="form-control" id="kin_address" name="kin_address" 
+                                      rows="3" required>{{ next_of_kin.address|default:'' }}</textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <!-- Success/Error Messages -->
+            {% if messages %}
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body text-center">
+                            <div class="bg-primary rounded-circle p-3 mx-auto mb-3" style="width: 100px; height: 100px;">
+                                <i class="fas fa-user text-white fa-3x"></i>
+                            </div>
+                            <h5 class="card-title">
+                                {% if investor_profile.get_full_title %}
+                                    {{ investor_profile.get_full_title }} {{ user.first_name }} {{ user.last_name }}
+                                {% else %}
+                                    Welcome, {{ user.first_name }}
+                                {% endif %}
+                            </h5>
+                            <p class="text-muted">{{ user.email }}</p>
+                            {% if user.investor_profile.telephone %}
+                            <p class="text-muted"><i class="fas fa-phone me-1"></i> {{ user.investor_profile.telephone }}</p>
+                            {% endif %}
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#profileModal">
+                                    Edit Profile
+                                </button>
+                                <form method="post" action="{% url 'logout' %}" class="d-grid">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-outline-danger">Logout</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-line me-2"></i> Portfolio
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-money-bill-wave me-2"></i> Transactions
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-file-invoice-dollar me-2"></i> Statements
+                        </a>
+                        <!-- Add Next of Kin to sidebar -->
+                        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#nextOfKinModal">
+                            <i class="fas fa-users me-2"></i> Next of Kin
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-cog me-2"></i> Settings
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-question-circle me-2"></i> Support
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <!-- Summary Cards -->
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="card-subtitle mb-1 text-muted">Total Investment</h6>
+                                            <h3 class="card-title mb-0">₦{{ total_investment|floatformat:2|intcomma }}</h3>
+                                        </div>
+                                        <div class="bg-primary rounded-circle p-3">
+                                            <i class="fas fa-wallet text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-success mt-2"><small>{{ investment_count }} active investment{{ investment_count|pluralize }}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="card-subtitle mb-1 text-muted">Current Value</h6>
+                                            <h3 class="card-title mb-0">₦{{ current_value|floatformat:2|intcomma }}</h3>
+                                        </div>
+                                        <div class="bg-success rounded-circle p-3">
+                                            <i class="fas fa-chart-line text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-success mt-2"><small>+{{ roi_percentage|floatformat:2 }}% ROI</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="card-subtitle mb-1 text-muted">Pending Returns</h6>
+                                            <h3 class="card-title mb-0">₦{{ pending_returns|floatformat:2|intcomma }}</h3>
+                                        </div>
+                                        <div class="bg-info rounded-circle p-3">
+                                            <i class="fas fa-hand-holding-usd text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mt-2"><small>Next payout: {{ next_payout_date|default:"TBD" }}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Overview -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Portfolio Overview</h5>
+                        </div>
+                        <div class="card-body">
+                            {% if investor_portfolio %}
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Investment Type</th>
+                                            <th>Amount</th>
+                                            <th>Current Value</th>
+                                            <th>ROI</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for investment in investor_portfolio %}
+                                        <tr>
+                                            <td>{{ investment.investment_type }}</td>
+                                            <td>₦{{ investment.amount|floatformat:2|intcomma }}</td>
+                                            <td>₦{{ investment.current_value|floatformat:2|intcomma }}</td>
+                                            <td class="text-success">+{{ investment.roi_percentage|floatformat:2 }}%</td>
+                                            <td><span class="badge bg-{{ investment.status_color }}">{{ investment.get_status_display }}</span></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {% else %}
+                            <div class="text-center py-4">
+                                <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
+                                <p class="text-muted">You don't have any investments yet.</p>
+                                <a href="{% url 'investments' %}" class="btn btn-primary">Explore Investments</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Transactions -->
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Recent Transactions</h5>
+            </div>
+            <div class="card-body">
+                {% if recent_transactions %}
+                <div class="list-group list-group-flush">
+                    {% for transaction in recent_transactions %}
+                    <div class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                        <div>
+                            <h6 class="mb-0">{{ transaction.description }}</h6>
+                            <small class="text-muted">{{ transaction.date|date:"d M Y, H:i" }}</small>
+                            <br>
+                            <small class="badge bg-{% if transaction.status == 'completed' %}success{% elif transaction.status == 'pending' %}warning{% else %}secondary{% endif %}">
+                                {{ transaction.get_status_display }}
+                            </small>
+                        </div>
+                        <span class="text-{% if transaction.transaction_type == 'withdrawal' or transaction.transaction_type == 'investment' %}danger{% else %}success{% endif %}">
+                            {% if transaction.transaction_type == 'withdrawal' or transaction.transaction_type == 'investment' %}-{% else %}+{% endif %}₦{{ transaction.amount|floatformat:2|intcomma }}
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center py-4">
+                    <i class="fas fa-receipt fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">No transactions found.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Performance Chart -->
+    <div class="col-lg-6 mb-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Portfolio Performance</h5>
+            </div>
+            <div class="card-body">
+                {% if performance_data %}
+                <canvas id="performanceChart" height="250"></canvas>
+                {% else %}
+                <div class="text-center py-4">
+                    <i class="fas fa-chart-line fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">No performance data available yet.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+                    
+                    <!-- Next of Kin Information Card -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Next of Kin Information</h5>
+                            <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#nextOfKinModal">
+                                <i class="fas fa-edit me-1"></i> {% if next_of_kin %}Update{% else %}Add{% endif %}
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            {% if next_of_kin %}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong>Name:</strong> {{ next_of_kin.full_name }}</p>
+                                        <p><strong>Relationship:</strong> {{ next_of_kin.relationship }}</p>
+                                        <p><strong>Email:</strong> {{ next_of_kin.email }}</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><strong>Phone:</strong> {{ next_of_kin.phone }}</p>
+                                        <p><strong>Address:</strong> {{ next_of_kin.address|linebreaksbr }}</p>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="text-center py-4">
+                                    <i class="fas fa-user-plus fa-3x text-muted mb-3"></i>
+                                    <p class="text-muted">You haven't added a next of kin yet.</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nextOfKinModal">
+                                        Add Next of Kin
+                                    </button>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Quick Actions</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-3 col-6 mb-3">
+                                    <a href="{% url 'invest_form' %}" class="btn btn-outline-primary p-3 w-100">
+                                        <i class="fas fa-chart-pie fa-2x mb-2"></i>
+                                        <br>
+                                        <span>Invest</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <a href="{% url 'withdraw_form' %}" class="btn btn-outline-primary p-3 w-100">
+                                        <i class="fas fa-download fa-2x mb-2"></i>
+                                        <br>
+                                        <span>Withdraw</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <a href="{% url 'statement_request' %}" class="btn btn-outline-primary p-3 w-100">
+                                        <i class="fas fa-file-invoice-dollar fa-2x mb-2"></i>
+                                        <br>
+                                        <span>Statement</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard Section End -->
+
+    <style>
+        .card {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .list-group-item.active {
+            background-color: #085e2b;
+            border-color: #085e2b;
+        }
+        
+        /* Style the logout button to match other buttons */
+        form.d-grid button.btn-outline-danger {
+            width: 100%;
+        }
+    </style>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get data from HTML element
+            const performanceData = document.getElementById('performance-data');
+            const hasPerformanceData = performanceData && performanceData.dataset.labels;
+            
+            if (hasPerformanceData) {
+                try {
+                    const performanceLabels = JSON.parse(performanceData.dataset.labels);
+                    const performanceValues = JSON.parse(performanceData.dataset.values);
+                    
+                    // Initialize chart with performanceLabels and performanceValues
+                    const ctx = document.getElementById('performanceChart').getContext('2d');
+                    const performanceChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: performanceLabels,
+                            datasets: [{
+                                label: 'Portfolio Value (₦)',
+                                data: performanceValues,
+                                borderColor: '#085e2b',
+                                backgroundColor: 'rgba(8, 94, 43, 0.1)',
+                                tension: 0.3,
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        callback: function(value) {
+                                            return '₦' + value.toLocaleString();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error parsing performance data:', error);
+                }
+            }
+            
+            // Make cards interactive
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                });
+            });
+            
+            // Show modals based on server flags
+            const flagsEl = document.getElementById('dashboard-flags');
+            if (flagsEl && flagsEl.dataset.profileErrors === '1') {
+                var profileModal = new bootstrap.Modal(document.getElementById('profileModal'));
+                profileModal.show();
+            }
+            if (flagsEl && flagsEl.dataset.kinErrors === '1') {
+                var nextOfKinModal = new bootstrap.Modal(document.getElementById('nextOfKinModal'));
+                nextOfKinModal.show();
+            }
+            
+            // Toggle other title field based on title selection
+            const titleSelect = document.getElementById('title');
+            const otherTitleContainer = document.getElementById('otherTitleContainer');
+            
+            if (titleSelect && otherTitleContainer) {
+                // Set initial state based on current value
+                otherTitleContainer.style.display = (titleSelect.value === 'Other') ? 'block' : 'none';
+
+                titleSelect.addEventListener('change', function() {
+                    if (this.value === 'Other') {
+                        otherTitleContainer.style.display = 'block';
+                    } else {
+                        otherTitleContainer.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,441 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Investor Registration - IHICL Investment{% endblock %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Investor Registration</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Investor</a></li>
+                <li class="breadcrumb-item active text-primary">Register</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Register Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="text-center mb-4">Create Your Investor Account</h3>
+                            
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                        {{ message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            
+                            {% if form.errors %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Please correct the errors below.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endif %}
+                            
+                            <form method="POST" action="{% url 'investment_register' %}">
+                                {% csrf_token %}
+                                
+                                <!-- Title Field -->
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Title *</label>
+                                    <select class="form-select {% if form.title.errors %}is-invalid{% endif %}" 
+                                            id="title" name="title" required onchange="toggleTitleInput()">
+                                        <option value="">Select Title</option>
+                                        <option value="Mr" {% if form.title.value == "Mr" %}selected{% endif %}>Mr</option>
+                                        <option value="Mrs" {% if form.title.value == "Mrs" %}selected{% endif %}>Mrs</option>
+                                        <option value="Other" {% if form.title.value == "Other" %}selected{% endif %}>Other</option>
+                                    </select>
+                                    {% if form.title.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.title.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <!-- Other Title Input (Initially Hidden) -->
+                                <div class="mb-3" id="otherTitleContainer" style="display: none;">
+                                    <label for="other_title" class="form-label">Specify Title *</label>
+                                    <input type="text" class="form-control {% if form.other_title.errors %}is-invalid{% endif %}" 
+                                           id="other_title" name="other_title" placeholder="Enter your title" 
+                                           value="{{ form.other_title.value|default:'' }}">
+                                    {% if form.other_title.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.other_title.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="first_name" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control {% if form.first_name.errors %}is-invalid{% endif %}" 
+                                               id="first_name" name="first_name" placeholder="John" 
+                                               value="{{ form.first_name.value|default:'' }}" required>
+                                        {% if form.first_name.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.first_name.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="last_name" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control {% if form.last_name.errors %}is-invalid{% endif %}" 
+                                               id="last_name" name="last_name" placeholder="Doe" 
+                                               value="{{ form.last_name.value|default:'' }}" required>
+                                        {% if form.last_name.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.last_name.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}" 
+                                           id="email" name="email" placeholder="name@example.com" 
+                                           value="{{ form.email.value|default:'' }}" required>
+                                    {% if form.email.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.email.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="country" class="form-label">Country *</label>
+                                        <select class="form-select {% if form.country.errors %}is-invalid{% endif %}" 
+                                                id="country" name="country" required onchange="updatePhoneCode()">
+                                            <option value="">Select Country</option>
+                                            {% for country in countries %}
+                                                <option value="{{ country.code }}" 
+                                                    data-phone-code="{{ country.phone_code }}"
+                                                    {% if form.country.value == country.code %}selected{% endif %}>
+                                                    {{ country.name }}
+                                                </option>
+                                            {% endfor %}
+                                        </select>
+                                        {% if form.country.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.country.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="telephone" class="form-label">Telephone *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="phoneCode">+</span>
+                                            <input type="tel" class="form-control {% if form.telephone.errors %}is-invalid{% endif %}" 
+                                                   id="telephone" name="telephone" placeholder="800 000 0000" 
+                                                   value="{{ form.telephone.value|default:'' }}" required
+                                                   aria-describedby="phoneCode">
+                                        </div>
+                                        {% if form.telephone.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.telephone.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address *</label>
+                                    <textarea class="form-control {% if form.address.errors %}is-invalid{% endif %}" 
+                                              id="address" name="address" rows="3" 
+                                              placeholder="Enter your full address" required>{{ form.address.value|default:'' }}</textarea>
+                                    {% if form.address.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.address.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="city" class="form-label">City *</label>
+                                        <input type="text" class="form-control {% if form.city.errors %}is-invalid{% endif %}" 
+                                               id="city" name="city" placeholder="City" 
+                                               value="{{ form.city.value|default:'' }}" required>
+                                        {% if form.city.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.city.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="state" class="form-label">State/Province *</label>
+                                        <input type="text" class="form-control {% if form.state.errors %}is-invalid{% endif %}" 
+                                               id="state" name="state" placeholder="State" 
+                                               value="{{ form.state.value|default:'' }}" required>
+                                        {% if form.state.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.state.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="postal_code" class="form-label">Postal Code</label>
+                                        <input type="text" class="form-control {% if form.postal_code.errors %}is-invalid{% endif %}" 
+                                               id="postal_code" name="postal_code" placeholder="Postal Code" 
+                                               value="{{ form.postal_code.value|default:'' }}">
+                                        {% if form.postal_code.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.postal_code.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <!-- Investment Amount Field -->
+                                <div class="mb-3">
+                                    <label for="investment_amount" class="form-label">Investment Amount(Initial) (₦) *</label>
+                                    <input type="number" class="form-control {% if form.investment_amount.errors %}is-invalid{% endif %}" 
+                                           id="investment_amount" name="investment_amount" 
+                                           placeholder="Minimum ₦10,000" 
+                                           value="{{ form.investment_amount.value|default:'' }}" 
+                                           min="10000" step="1000" required>
+                                    
+                                    {% if form.investment_amount.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.investment_amount.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                                
+                                <div class="mb-3 password-input-group">
+                                    <label for="password1" class="form-label">Password *</label>
+                                    <input type="password" class="form-control {% if form.password1.errors %}is-invalid{% endif %}" 
+                                           id="password1" name="password1" placeholder="Create a strong password" required>
+                                    <span class="password-toggle" onclick="togglePassword('password1')">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                    <div class="form-text">Must be at least 8 characters with a number and symbol</div>
+                                    {% if form.password1.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.password1.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="mb-4 password-input-group">
+                                    <label for="password2" class="form-label">Confirm Password *</label>
+                                    <input type="password" class="form-control {% if form.password2.errors %}is-invalid{% endif %}" 
+                                           id="password2" name="password2" placeholder="Confirm your password" required>
+                                    <span class="password-toggle" onclick="togglePassword('password2')">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                    {% if form.password2.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.password2.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input {% if form.terms.errors %}is-invalid{% endif %}" 
+                                               id="terms" name="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *
+                                        </label>
+                                        {% if form.terms.errors %}
+                                            <div class="invalid-feedback">
+                                                {{ form.terms.errors.0 }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter"
+                                               {% if form.newsletter.value %}checked{% endif %}>
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to newsletter for investment updates
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Add reCAPTCHA field -->
+                                <div class="mb-4">
+                                    {{ form.captcha }}
+                                    {% if form.captcha.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.captcha.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100 py-2">Create Account & Submit Investment</button>
+                            </form>
+                            
+                            <div class="text-center mt-4">
+                                <p>Already have an account? <a href="{% url 'investment_login' %}">Sign in</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register Section End -->
+
+    <style>
+        .password-input-group {
+            position: relative;
+        }
+        
+        .password-toggle {
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 40px;
+            color: #6c757d;
+        }
+        
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-text {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        
+        .input-group-text {
+            min-width: 60px;
+        }
+        
+        /* Style for investment amount field */
+        #investment_amount {
+            font-weight: bold;
+        }
+        
+        /* reCAPTCHA styling */
+        .g-recaptcha {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Adjust reCAPTCHA for mobile */
+        @media (max-width: 576px) {
+            .g-recaptcha {
+                transform: scale(0.85);
+                transform-origin: 0 0;
+            }
+        }
+    </style>
+
+<script>
+    // Function to update phone code based on selected country
+    function updatePhoneCode() {
+        const countrySelect = document.getElementById('country');
+        const phoneCodeElement = document.getElementById('phoneCode');
+        const selectedOption = countrySelect.options[countrySelect.selectedIndex];
+        
+        if (selectedOption && selectedOption.dataset.phoneCode) {
+            let phoneCode = selectedOption.dataset.phoneCode;
+            
+            // Special handling for United States - show only +1 instead of area codes
+            if (phoneCode.startsWith('+1') && phoneCode.length > 2) {
+                phoneCode = '+1';
+            }
+            
+            phoneCodeElement.textContent = phoneCode;
+        } else {
+            phoneCodeElement.textContent = '+';
+        }
+    }
+    
+    function togglePassword(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon = passwordInput.parentNode.querySelector('.password-toggle i');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }
+    }
+    
+    // Function to toggle the "Other Title" input field
+    function toggleTitleInput() {
+        const titleSelect = document.getElementById('title');
+        const otherTitleContainer = document.getElementById('otherTitleContainer');
+        
+        if (titleSelect.value === 'Other') {
+            otherTitleContainer.style.display = 'block';
+            document.getElementById('other_title').setAttribute('required', 'required');
+        } else {
+            otherTitleContainer.style.display = 'none';
+            document.getElementById('other_title').removeAttribute('required');
+        }
+    }
+    
+    // Simple validation - remove any formatting that might interfere
+    document.getElementById('investment_amount').addEventListener('input', function(e) {
+        // Allow only numbers and decimal point
+        e.target.value = e.target.value.replace(/[^0-9.]/g, '');
+        
+        // Prevent multiple decimal points
+        if ((e.target.value.match(/\./g) || []).length > 1) {
+            e.target.value = e.target.value.substring(0, e.target.value.lastIndexOf('.'));
+        }
+    });
+    
+    // Check on page load if "Other" is already selected
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleTitleInput();
+        updatePhoneCode();
+    });
+    
+    // Validate form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const password1 = document.getElementById('password1').value;
+        const password2 = document.getElementById('password2').value;
+        const investmentAmountInput = document.getElementById('investment_amount');
+        let investmentAmount = investmentAmountInput.value;
+        
+        // Remove any commas for validation
+        investmentAmount = investmentAmount.replace(/,/g, '');
+        
+        if (password1 !== password2) {
+            e.preventDefault();
+            alert('Passwords do not match!');
+            document.getElementById('password2').classList.add('is-invalid');
+            return false;
+        }
+        
+        // Validate minimum investment amount
+        const numericAmount = parseFloat(investmentAmount);
+        if (isNaN(numericAmount) || numericAmount < 10000) {
+            e.preventDefault();
+            alert('Minimum investment amount is ₦10,000!');
+            investmentAmountInput.classList.add('is-invalid');
+            return false;
+        }
+        
+        // Ensure the value sent to server doesn't have commas
+        investmentAmountInput.value = investmentAmount;
+    });
+</script>
+{% endblock %}

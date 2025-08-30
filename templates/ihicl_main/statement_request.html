@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Request Statement - IHICL Investment{% endblock %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Request Account Statement</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li class="breadcrumb-item active text-primary">Statement Request</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Statement Request Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="text-center mb-4">Request Your Account Statement</h3>
+                            
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                        {{ message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            
+                            <form method="POST">
+                                {% csrf_token %}
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="id_period_start" class="form-label">Start Date</label>
+                                            {{ form.period_start }}
+                                            {% if form.period_start.errors %}
+                                                <div class="invalid-feedback d-block">
+                                                    {{ form.period_start.errors.0 }}
+                                                </div>
+                                            {% endif %}
+                                            <div class="form-text">Leave blank for all-time statement</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="id_period_end" class="form-label">End Date</label>
+                                            {{ form.period_end }}
+                                            {% if form.period_end.errors %}
+                                                <div class="invalid-feedback d-block">
+                                                    {{ form.period_end.errors.0 }}
+                                                </div>
+                                            {% endif %}
+                                            <div class="form-text">Leave blank for current date</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="id_notes" class="form-label">Additional Notes (Optional)</label>
+                                    {{ form.notes }}
+                                    {% if form.notes.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {{ form.notes.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                    <div class="form-text">Specify any particular requirements for your statement</div>
+                                </div>
+                                
+                                <div class="alert alert-info">
+                                    <h6><i class="fas fa-info-circle me-2"></i> Important Information</h6>
+                                    <ul class="mb-0">
+                                        <li>Statements are typically processed within 24 hours</li>
+                                        <li>You will receive your statement via email</li>
+                                        <li>If no date range is specified, you'll receive a complete statement</li>
+                                        <li>For urgent requests, please contact support directly</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i> Submit Statement Request
+                                    </button>
+                                    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+                                        Cancel
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Statement Request Section End -->
+
+    <style>
+        .form-text {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+        .alert ul {
+            padding-left: 1rem;
+            margin-bottom: 0;
+        }
+    </style>
+{% endblock %}

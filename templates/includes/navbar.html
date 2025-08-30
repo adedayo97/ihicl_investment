@@ -1,0 +1,41 @@
+{% load static %}
+<div class="container-fluid sticky-top px-0">
+    <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+    <div class="container px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+            <a href="{% url 'home' %}" class="navbar-brand p-0">
+                <img src="{% static 'img/ife-color-logo (1).png' %}" alt="IHICL Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link {% if request.path == '/about/' %}active{% endif %}">About</a>
+                    <a href="{% url 'investments' %}" class="nav-item nav-link {% if request.path == '/services/' %}active{% endif %}">Investments</a>
+                    <a href="{% url 'partners' %}" class="nav-item nav-link {% if request.path == '/projects/' %}active{% endif %}">Partners</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{% url 'faqs' %}" class="dropdown-item">FAQs</a>
+                            <a href="{% url 'roadmap' %}" class="dropdown-item">RoadMap</a>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == '/contact/' %}active{% endif %}">Contact</a>
+                </div>
+                
+                {% if user.is_authenticated %}
+                <!-- Show Dashboard button when user is logged in -->
+                <a href="{% url 'dashboard' %}" class="btn btn-success rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">
+                     Dashboard
+                </a>
+                {% else %}
+                <!-- Show Invest Now button when user is not logged in -->
+                <a href="{% url 'investment_login' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Invest Now</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>

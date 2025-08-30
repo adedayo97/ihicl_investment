@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="bg-breadcrumb-single"></div>
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About IHICL</h4>
+        <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item active text-primary">About</li>
+        </ol>    
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- About Start -->
+<div class="container-fluid about bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="about-img">
+                    <img src="{% static 'img/about-3.png' %}" class="img-fluid w-100 rounded-top bg-white" alt="IHICL Overview">
+                    <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-bottom" alt="IHICL Facilities">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                <h4 class="text-primary">Our Vision</h4>
+                <h1 class="display-5 mb-4">Integrated Agricultural & Mining Investment Platform</h1>
+                <p class="text ps-4 mb-4">
+                    Ife Heritage Industrial Farm Settlement (IHICL) is a professionally managed, impact-driven investment platform building an integrated agricultural, small-scale mining, and lifestyle hub in Ile-Ife.
+                </p>
+                <div class="row g-4 justify-content-between mb-5">
+                    <div class="col-lg-6 col-xl-5">
+                        <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> ESG-aligned Operations</p>
+                        <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Transparent Reporting</p>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Community-Centered Growth</p>
+                        <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Resilient Cash Flows</p>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-between mb-5">
+                    <div class="col-xl-5"><a href="#what-we-do" class="btn btn-primary rounded-pill py-3 px-5">Explore Our Work</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- What We Do Start -->
+<div class="container-fluid py-5" id="what-we-do">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Operations</h4>
+            <h1 class="display-4">What We Do</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                <p class="mb-4">IHICL is developing a purpose-built industrial and lifestyle settlement comprising:</p>
+                <ul class="list-group list-group-flush mb-5">
+                    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-primary me-2"></i> Agricultural estates & processing plants</li>
+                    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-primary me-2"></i> Mining & mineral trade facilities</li>
+                    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-primary me-2"></i> Worker housing & support infrastructure</li>
+                    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-primary me-2"></i> IFE Heritage Resorts — a high-end eco-resort</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- What We Do End -->
+
+<!-- Portfolio Start -->
+<div class="container-fluid portfolio-bg py-5" style="background-color: #F9F4E8;">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Portfolio</h4>
+            <h1 class="display-4">Portfolio & Pipelines</h1>
+        </div>
+        
+        <!-- Agriculture Section -->
+        <div class="row g-4 mb-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded shadow portfolio-card">
+                    <h3 class="text-primary mb-3">A. Agriculture & Agriprocessing</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Livestock:</strong> Poultry, piggery, aquaculture, cattle</li>
+                        <li class="mb-2"><strong>Staple crops:</strong> Cassava, maize, yam, vegetables</li>
+                        <li class="mb-2"><strong>Cash crops:</strong> Cocoa, cashew exports</li>
+                        <li class="mb-2"><strong>Processing:</strong> Cassava, grain milling, oils</li>
+                        <li><strong>Infrastructure:</strong> Feed mill, hatchery, solar power</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Mining Section -->
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded shadow portfolio-card">
+                    <h3 class="text-primary mb-3">B. Responsible Mining</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Small-scale mining:</strong> Gold & gemstones</li>
+                        <li class="mb-2"><strong>Gold Buying Centre:</strong> KYC/AML-compliant</li>
+                        <li class="mb-2"><strong>Supplier development:</strong> Capacity-building</li>
+                        <li><strong>Assay & logistics:</strong> Secure valuation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Resort Section -->
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded shadow portfolio-card">
+                    <h3 class="text-primary mb-3">C. IFE Heritage Resorts</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Concept:</strong> "Home away from home"</li>
+                        <li class="mb-2"><strong>Market:</strong> Diaspora, corporate retreats</li>
+                        <li class="mb-2"><strong>Facilities:</strong> Eco-lodges, spa, dining</li>
+                        <li><strong>Activities:</strong> Hiking, fishing, cycling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Sections -->
+        <div class="row g-4">
+            <!-- Agriculture Details -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card border-0 shadow h-100 portfolio-card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Agriculture Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Poultry (broilers/layers)</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Pig farming</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Catfish/tilapia aquaculture</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Cold chain storage</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Solar-hybrid power</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mining Details -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card border-0 shadow h-100 portfolio-card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Mining Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Licensed extraction</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> ESG standards compliance</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Traceability systems</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Safety training</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Mine rehabilitation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resort Details -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="card border-0 shadow h-100 portfolio-card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Resort Features</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Luxury eco-lodges</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Spa & wellness center</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Farm-to-table dining</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Cultural arts pavilion</li>
+                            <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> Conference facilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio End -->
+
+<!-- Team Start -->
+<div class="container-fluid team py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Team</h4>
+            <h1 class="display-4">Meet Our Leadership</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {% for member in team_members %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+                <div class="team-item rounded">
+                    <div class="team-img">
+                        <img src="{{ member.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ member.name }}">
+                        <div class="team-icon">
+                            <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
+                            <div class="team-icon-share">
+                                {% if member.facebook %}<a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href="{{ member.facebook }}"><i class="fab fa-facebook-f"></i></a>{% endif %}
+                                {% if member.twitter %}<a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href="{{ member.twitter }}"><i class="fab fa-twitter"></i></a>{% endif %}
+                                {% if member.linkedin %}<a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href="{{ member.linkedin }}"><i class="fab fa-linkedin-in"></i></a>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content bg-dark text-center rounded-bottom p-4">
+                        <div class="team-content-inner rounded-bottom">
+                            <h4 class="text-white">{{ member.name }}</h4>
+                            <p class="text-muted mb-0">{{ member.position }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<style>
+    /* Portfolio Card Styling */
+    .portfolio-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(13, 110, 253, 0.1) !important;
+    }
+    
+    .portfolio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Custom styling for the beige background section */
+    .portfolio-bg {
+        position: relative;
+    }
+</style>
+
+{% endblock %}

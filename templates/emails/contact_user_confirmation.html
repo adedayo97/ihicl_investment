@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Contacting IHICL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #085e2b, #0a7e3a);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .thank-you {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #085e2b;
+            margin-bottom: 20px;
+        }
+        .detail-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .detail-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #085e2b;
+            display: inline-block;
+            width: 120px;
+        }
+        .next-steps {
+            background: #e7f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .next-steps h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✅ Message Received - Thank You!</h1>
+        </div>
+        
+        <div class="content">
+            <div class="thank-you">
+                <h2 style="color: #085e2b;">Dear {{ name }},</h2>
+                <p>Thank you for contacting IHICL Investment. We have received your message and will get back to you shortly.</p>
+            </div>
+            
+            <div class="details">
+                <h3 style="margin-top: 0; color: #085e2b;">Your Message Details:</h3>
+                <div class="detail-item">
+                    <span class="label">Subject:</span>
+                    {{ subject }}
+                </div>
+                <div class="detail-item">
+                    <span class="label">Submitted:</span>
+                    {{ timestamp|date:"F j, Y, g:i a" }}
+                </div>
+                <div class="detail-item">
+                    <span class="label">Reference:</span>
+                    #{{ reference }}
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li>Our team will review your message within 24 hours</li>
+                    <li>We'll respond to the email address you provided: <strong>{{ email }}</strong></li>
+                    {% if subject == 'Investment Opportunities' %}
+                    <li>For investment inquiries, our investment team will contact you to discuss opportunities</li>
+                    {% elif subject == 'Partnership' %}
+                    <li>For partnership proposals, our business development team will reach out</li>
+                    {% elif subject == 'Account Support' %}
+                    <li>For account support, our customer service team will assist you</li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+            <div class="contact-info">
+                <h3 style="margin-top: 0; color: #085e2b;">Need Immediate Assistance?</h3>
+                <p>If you need to reach us urgently, please contact our team directly:</p>
+                <p>
+                    <strong>📞 Phone:</strong> +234980009630<br>
+                    <strong>📧 Email:</strong> info@ifeheritage.com
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This is an automated confirmation email. Please do not reply to this message.</p>
+            <p>© {% now "Y" %} IHICL Investment. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

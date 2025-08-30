@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Investor Login - IHICL Investment{% endblock %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Investor Login</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Investor</a></li>
+                <li class="breadcrumb-item active text-primary">Login</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Login Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="text-center mb-4">Sign In to Your Account</h3>
+                            
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                        {{ message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            
+                            {% if form.errors %}
+                                <div class="alert alert-danger">
+                                    Your username and password didn't match. Please try again.
+                                </div>
+                            {% endif %}
+                            
+                            <form method="post" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="next" value="{{ next }}">
+                                
+                                <div class="mb-3">
+                                    <label for="id_username" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="id_username" name="username" placeholder="name@example.com" required>
+                                </div>
+                                
+                                <div class="mb-4 password-input-group">
+                                    <label for="id_password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="id_password" name="password" placeholder="Enter your password" required>
+                                    <span class="password-toggle" onclick="togglePassword('id_password')">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                                        <label class="form-check-label" for="remember">Remember me</label>
+                                    </div>
+                                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+                            </form>
+                            
+                            <div class="text-center mt-4">
+                                <p>Don't have an account? <a href="{% url 'investment_register' %}">Register now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Section End -->
+
+    <style>
+        .password-input-group {
+            position: relative;
+        }
+        
+        .password-toggle {
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 40px;
+            color: #6c757d;
+        }
+    </style>
+
+    <script>
+        function togglePassword(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleIcon = passwordInput.parentNode.querySelector('.password-toggle i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
+{% endblock %}

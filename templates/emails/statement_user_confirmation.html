@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement Request Confirmation - IHICL</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .header { background: linear-gradient(135deg, #085e2b, #0a7e3a); color: white; padding: 20px; text-align: center; border-radius: 10px 10px 0 0; margin: -30px -30px 30px -30px; }
+        .header h1 { margin: 0; font-size: 24px; font-weight: bold; }
+        .content { margin-bottom: 30px; }
+        .details { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #085e2b; margin-bottom: 20px; }
+        .detail-item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .detail-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .label { font-weight: bold; color: #085e2b; display: inline-block; width: 150px; }
+        .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 14px; }
+        .next-steps { background: #e7f4ff; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✅ Statement Request Received</h1>
+        </div>
+        
+        <div class="content">
+            <h2 style="color: #085e2b;">Dear {{ user.first_name }},</h2>
+            <p>Thank you for requesting your account statement. We have received your request and will process it shortly.</p>
+            
+            <div class="details">
+                <h3 style="margin-top: 0; color: #085e2b;">Request Details:</h3>
+                <div class="detail-item">
+                    <span class="label">Reference:</span>
+                    {{ statement_request.reference }}
+                </div>
+                <div class="detail-item">
+                    <span class="label">Request Date:</span>
+                    {{ statement_request.request_date|date:"F j, Y, g:i a" }}
+                </div>
+                <div class="detail-item">
+                    <span class="label">Period:</span>
+                    {% if period_start and period_end %}
+                        {{ period_start|date:"M j, Y" }} to {{ period_end|date:"M j, Y" }}
+                    {% else %}
+                        Complete Statement (All Time)
+                    {% endif %}
+                </div>
+                {% if notes %}
+                <div class="detail-item">
+                    <span class="label">Your Notes:</span>
+                    {{ notes }}
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="next-steps">
+                <h3 style="margin-top: 0; color: #007bff;">What Happens Next?</h3>
+                <ul>
+                    <li>Your statement will be prepared within 24 hours</li>
+                    <li>You will receive it via email at <strong>{{ user.email }}</strong></li>
+                    <li>The statement will include all transactions and investment details</li>
+                    <li>If you need it urgently, please contact our support team</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This is an automated confirmation email. Please do not reply to this message.</p>
+            <p>© {% now "Y" %} IHICL Investment. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

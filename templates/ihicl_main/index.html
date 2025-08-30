@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+     <!-- Carousel Start -->
+     <div class="header-carousel owl-carousel">
+        <!-- Slide 1 (Existing content) -->
+        <div class="header-carousel-item">
+            <div class="header-carousel-item-img-1">
+                <img src="{% static 'img/farmland.jpg' %}" class="img-fluid w-100" alt="IHICL Investment">
+            </div>
+            <div class="carousel-caption">
+                <div class="carousel-caption-inner text-start p-3">
+                    <h1 class="display-5 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Building Wealth, Sustaining Communities, Securing the Future
+                    </h1>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">
+                        Ife Heritage Investment is an indigenous platform driving prosperity through integrated agribusiness, responsible mining, and lifestyle tourism in Ile‑Ife, Osun State, Nigeria
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="{% url 'investments' %}">Explore Opportunities</a>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="{% url 'about' %}">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 (New content) -->
+        <div class="header-carousel-item">
+            <div class="header-carousel-item-img-2">
+                <img src="{% static 'img/farmland2.jpg' %}" class="img-fluid w-100" alt="IHICL Mining">
+            </div>
+            <div class="carousel-caption">
+                <div class="carousel-caption-inner text-center p-3">
+                    <h1 class="display-5 text-capitalize text-white mb-4">Responsible Mining & Sustainable Development</h1>
+                    <p class="mb-5 fs-5">
+                        Our ESG-compliant mining operations and Gold Buying Centre ensure ethical mineral trading with full traceability.
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Invest Now</a>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="{% url 'investments' %}">Our Services</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid about bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img src="{% static 'img/about-3.png' %}" class="img-fluid w-100 rounded-top bg-white" alt="About IHICL">
+                        <img src="{% static 'img/about-us.jpg' %}" class="img-fluid w-100 rounded-bottom" alt="IHICL Farm">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                    <h4 class="text-primary">About Us</h4>
+                    <h1 class="display-5 mb-4">Impact-Driven Investment Platform</h1>
+                    <p class="text ps-4 mb-4">
+                        Our model blends primary production, value-added processing, mineral trading, and premium hospitality, creating resilient cash flows, inclusive jobs, and long-term socio-economic transformation.
+                    </p>
+                    <div class="row g-4 justify-content-between mb-5">
+                        <div class="col-lg-6 col-xl-5">
+                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Integrated Agricultural Model</p>
+                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Responsible Mining</p>
+                        </div>
+                        <div class="col-lg-6 col-xl-7">
+                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Value-Added Processing</p>
+                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Premium Hospitality</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 justify-content-between mb-5">
+                        <div class="col-xl-5"><a href="{% url 'about' %}" class="btn btn-primary rounded-pill py-3 px-5">Discover More</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Mission, Vision & Values Start -->
+    <div class="container-fluid mission-vision-values py-5" style="background: #f8f9fa;">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Core Principles</h4>
+            
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Mission -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card values-item h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="values-icon mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto">
+                                    <i class="fas fa-bullseye fa-2x text-white"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-primary mb-3">Mission</h3>
+                            <p class="text-dark mb-0">
+                                To create investment opportunities with competitive returns, empower local communities, and position Ile‑Ife as a beacon of indigenous development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card values-item h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="values-icon mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto">
+                                    <i class="fas fa-eye fa-2x text-white"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-primary mb-3">Vision</h3>
+                            <p class="text-dark mb-0">
+                                To be the leading integrated investment hub in Osun State and beyond, recognized for excellence in agribusiness, mining, and lifestyle tourism.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Values -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card values-item h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="values-icon mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-3 mx-auto">
+                                    <i class="fas fa-gem fa-2x text-white"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-primary mb-3">Values</h3>
+                            <ul class="list-unstyled mb-0 text-start">
+                                <li class="mb-2 text-dark"><i class="fas fa-check-circle text-primary me-2"></i> Integrity & Transparency</li>
+                                <li class="mb-2 text-dark"><i class="fas fa-check-circle text-primary me-2"></i> Sustainability & Stewardship</li>
+                                <li class="mb-2 text-dark"><i class="fas fa-check-circle text-primary me-2"></i> Community Empowerment</li>
+                                <li class="text-dark"><i class="fas fa-check-circle text-primary me-2"></i> Excellence & Innovation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mission, Vision & Values End -->
+     <!-- Portfolio Start -->
+    <div class="container-fluid portfolio py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8">
+                    <h3 class="text-primary mb-0">Our Portfolio</h3>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'investments' %}">
+                        <span class="me-2">View Full Investment Portfolio</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Industrial Farm Settlement -->
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-card bg-teal-dark text-white rounded p-4 h-100">
+                        <h5 class="text-warning mb-3">IHICL – Industrial Farm Settlement</h5>
+                        <p class="mb-3"><strong>Integrated crop & livestock farming, processing, storage, and distribution.</strong></p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Livestock: poultry, piggery, aquaculture, cattle</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Crops: cassava, maize, yam, cocoa, cashew</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Processing: cassava derivatives, grain milling, oil extraction</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Infrastructure: warehouses, feed mill, cold chain, housing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Responsible Mining -->
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="portfolio-card bg-teal-dark text-white rounded p-4 h-100">
+                        <h5 class="text-warning mb-3">Responsible Mining & Gold Buying Centre</h5>
+                        <p class="mb-3"><strong>ESG‑aligned small‑scale mining with compliant gold & gemstone trade.</strong></p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Licensed extraction within regulatory frameworks</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> KYC/AML‑compliant Gold Buying Centre with traceability</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Supplier development for artisanal miners</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Assets & secure logistics partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IFE Heritage Resorts -->
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-card bg-teal-dark text-white rounded p-4 h-100">
+                        <h5 class="text-warning mb-3">IFE Heritage Resorts</h5>
+                        <p class="mb-3"><strong>A luxury eco‑resort set in pristine nature with fresh, unpolluted air.</strong></p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Eco‑lodges • Spa & wellness: Farm‑to‑table dining</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Cultural pavilion: Conference & retreat facilities</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Outdoor activities: hiking, fishing, cycling</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Target markets: diaspora, domestic, corporate, wellness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Become Volunteer Start -->
+    <section class="become-volunteer" style="background-color: var(--bs-primary); color: black;">
+        <div class="container">
+            <div class="become-volunteer__inner py-5">
+                <div class="become-volunteer__left">
+                    <div class="section-title text-left">
+                        <h2 class="section-title__title mb-0">Partner with us today as we grow <br> the economy through agriculture.</h2>
+                    </div>
+                </div>
+                <div class="become-volunteer__right">
+                    <a href="{% url 'contact' %}" class="thm-btn become-volunteer__btn" style="background-color: var(--bs-teal-dark); border-color: var(--bs-primary);">Start Investing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Become Volunteer End -->
+
+    
+    <style>
+        .mission-vision-values {
+            background: var(--bs-teal-dark)   !important;
+        }
+        
+        .values-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .values-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .values-icon {
+            margin-bottom: 1.5rem;
+        }
+        
+        .values-item h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .values-item p {
+            line-height: 1.6;
+            color: #6c757d;
+        }
+        
+        .values-item ul li {
+            margin-bottom: 0.5rem;
+            color: #6c757d;
+        }
+        
+        .values-item ul li i {
+            color: var(--bs-primary);
+        }
+        
+        .card.values-item {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card.values-item .card-body {
+            padding: 2rem;
+        }
+
+        /* Portfolio Styles */
+        .portfolio-card {
+            background-color: var(--bs-teal-dark); /* bs-teal-dark */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(10, 162, 167, 0.2) !important;
+        }
+        
+        .portfolio-card h5 {
+            font-weight: 600;
+        }
+        
+        .portfolio-card ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-card ul li i {
+            color: #ffd700; /* Gold color for checkmarks */
+        }
+        
+        .text-warning {
+            color: #d4ab34 !important; /* Custom gold color from your design */
+        }
+        
+        /* Become Volunteer Styles */
+        .become-volunteer__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .thm-btn {
+            background-color: var(--bs-teal-dark);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--bs-primary);
+        }
+        
+        .thm-btn:hover {
+            background-color: var(--bs-teal-dark);
+            border-color: var(--bs-teal-dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .become-volunteer__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .become-volunteer__left {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+{% endblock %}

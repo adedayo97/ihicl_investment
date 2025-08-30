@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You for Your Investment Request</title>
+</head>
+<body>
+    <h2>Thank You for Your Investment Request</h2>
+    <p>Dear {{ user.get_full_name|default:"Investor" }},</p>
+    
+    <p>We have received your investment request for <strong>₦{{ amount|floatformat:2|default:"0.00" }}</strong>.</p>
+    
+    <p>Our team will review your request and contact you within 24 hours to complete the process.</p>
+    
+    <p>If you have any questions, please don't hesitate to contact our support team.</p>
+    
+    <p>Thank you for choosing IHICL Investments.</p>
+    
+    <p><strong>IHICL Investment Team</strong><br>
+    Email: <a href="mailto:info@ifeheritage.com">info@ifeheritage.com</a><br>
+    Phone: +234980009630</p>
+</body>
+</html>

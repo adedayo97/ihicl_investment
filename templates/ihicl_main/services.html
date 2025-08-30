@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Investment Opportunities - IHICL Investment{% endblock %}
+
+{% block content %}
+   <!-- Header Start -->
+   <div class="container-fluid bg-breadcrumb">
+    <div class="bg-breadcrumb-single"></div>
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Investment Opportunities</h4>
+        <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-primary">Investments</li>
+        </ol>    
+    </div>
+</div>
+<!-- Header End -->
+    <div class="container-fluid py-5" style="background-color: #F9F4E8; color: #fff;">
+        <!-- Portfolio Section -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h3 style="color: #d4ab34;">Our Portfolio</h3>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card bg-dark text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #d4ab34;">IHICL – Industrial Farm Settlement</h5>
+                        <p class="card-text"><strong style="color: #ffffff;">Integrated crop & livestock farming, processing, storage, and distribution.</strong></p>
+                        <ul>
+                            <li>Livestock: poultry, piggery, aquaculture, cattle</li>
+                            <li>Crops: cassava, maize, yam, cocoa, cashew</li>
+                            <li>Processing: cassava derivatives, grain milling, oil extraction</li>
+                            <li>Infrastructure: warehouses, feed mill, cold chain, housing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card bg-dark text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #d4ab34;">Responsible Mining & Gold Buying Centre</h5>
+                        <p class="card-text"><strong style="color: #ffffff;">ESG‑aligned small‑scale mining with compliant gold & gemstone trade.</strong></p>
+                        <ul>
+                            <li>Licensed extraction within regulatory frameworks</li>
+                            <li>KYC/AML‑compliant Gold Buying Centre with traceability</li>
+                            <li>Supplier development for artisanal miners</li>
+                            <li>Assets & secure logistics partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card bg-dark text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #d4ab34;">IFE Heritage Resorts</h5>
+                        <p class="card-text"><strong style="color: #ffffff;">A luxury eco‑resort set in pristine nature with fresh, unpolluted air.</strong></p>
+                        <ul>
+                            <li>Eco‑lodges • Spa & wellness: Farm‑to‑table dining</li>
+                            <li>Cultural pavilion: Conference & retreat facilities</li>
+                            <li>Outdoor activities: hiking, fishing, cycling</li>
+                            <li>Target markets: diaspora, domestic, corporate, wellness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card bg-dark text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #d4ab34;">Business Model & Revenue Streams</h5>
+                        <ul>
+                            <li>Agriculture: livestock, crops, cash crops</li>
+                            <li>Processing: cassava products, milled grains, oils</li>
+                            <li>Logistics: aggregation, haulage, off‑taker coordination</li>
+                            <li>Mineral trading: spreads, assay/refining services</li>
+                            <li>Hospitality: bookings, events, wellness packages</li>
+                            <li>Land & JVs for specialized facilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use of Funds Section -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h2 style="color: #d4ab34;">Use of Funds</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Category</th>
+                            <th scope="col">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Land & Site Development</td>
+                            <td>Preparation, roads, drainage, fencing, utilities</td>
+                        </tr>
+                        <tr>
+                            <td>Core Infrastructure</td>
+                            <td>Warehouses, processing lines, cold rooms, solar power</td>
+                        </tr>
+                        <tr>
+                            <td>Productive Assets</td>
+                            <td>Livestock units, machinery, assay equipment</td>
+                        </tr>
+                        <tr>
+                            <td>Hospitality Development</td>
+                            <td>Resort lodges, spa, dining, leisure infrastructure</td>
+                        </tr>
+                        <tr>
+                            <td>Licensing & Compliance</td>
+                            <td>Permits, certifications, traceability systems</td>
+                        </tr>
+                        <tr>
+                            <td>Working Capital</td>
+                            <td>Inputs, operations, staffing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Become Volunteer Start -->
+    <section class="become-volunteer" style="background-color: var(--bs-primary); color: black;">
+        <div class="container">
+            <div class="become-volunteer__inner py-5">
+                <div class="become-volunteer__left">
+                    <div class="section-title text-left">
+                        <h2 class="section-title__title mb-0">Partner with us today as we grow <br> the economy through agriculture.</h2>
+                    </div>
+                </div>
+                <div class="become-volunteer__right">
+                    <a href="{% url 'contact' %}" class="thm-btn become-volunteer__btn" style="background-color: var(--bs-teal-dark); border-color: var(--bs-primary);">Start Investing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Become Volunteer End -->
+
+    <!-- Custom CSS after HTML structure -->
+    <style>
+        /* Table styling */
+        .table {
+            background-color: #6F7775 !important;
+            color: #fff;
+            border-color: #5a6160;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .table th, .table td {
+            border-color: #5a6160;
+            padding: 12px 15px;
+        }
+        
+        .table thead th {
+            background-color: #5a6160;
+            color: #d4ab34;
+            font-weight: bold;
+            border-bottom: 2px solid #5a6160;
+            text-align: center;
+        }
+        
+        .table tbody tr:hover {
+            background-color: rgba(212, 171, 52, 0.1);
+        }
+        
+        /* Center the table container */
+        .justify-content-center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* Card styling enhancements */
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+            color: #e0e0e0;
+        }
+        
+        /* Section headers */
+        h2, h3 {
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+            
+            .table {
+                font-size: 14px;
+            }
+            
+            .col-12.col-lg-10.col-xl-8 {
+                width: 95%;
+            }
+        }
+        /* Become Volunteer Styles */
+        .become-volunteer__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .thm-btn {
+            background-color: var(--bs-teal-dark);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--bs-primary);
+        }
+        
+        .thm-btn:hover {
+            background-color: var(--bs-teal-dark);
+            border-color: var(--bs-teal-dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .become-volunteer__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .become-volunteer__left {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+{% endblock %}
