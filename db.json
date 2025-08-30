@@ -1,0 +1,2463 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "faq"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "investmentsector"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "teammember"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "testimonial"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "investmentopportunity"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "contactsubmission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "investorprofile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "transaction"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "investment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "nextofkin"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ihicl_main",
+        "model": "statementrequest"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "0f9oymvvx6c0eurgzwa4iigb9ndsqv11",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAUBO_iGlmx_fyjpOcM1vojHEC2FCcV4u4QKQW0OzP7YgHbWsM2yhLmzM7Ms9PvFpEepe0g39Funafe1mWOfFf4QQe_9lyel8P9O6gY9VuTSh4k4b0wMFbIkgmTcBCedAGiIKt9MTlrUIpCKqeshpRmImeVZu8P0CI23Q:1uryvg:qpyCe22TzLU44LQzIm9KtZfLdSzHDK6651eXx0x8LOY",
+        "expire_date": "2025-09-12T13:14:08.076Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "169d9j6lm91os385opmp32nyykk7o18e",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe_StWk6lGGKS_eeoel0BkFNSSisjHdXEha6_e-9_zIxbesYt6pLnMScDZnT78YpP7TsQO6p3Gab57IuE9tdsQet9jqLPi-H-3cwpjp-a6WuhcS9VwoIrmEIqE32LBAadEjCvSAR6wBAvnPe9UGDdC0HHDKa9wfJPDcl:1uraWd:U8A9QxCNlv_JuQH7n1hWaSmjW6LIA8FB2aOczctARtQ",
+        "expire_date": "2025-09-11T11:10:39.159Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1ddc1p9ehrgl9rt37r17nra74fydoo39",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP_C2RC2QKEevfcNzcIuUjWQlPZk_Lsh6UGvM5N5iwWPPS9H421ZSVwFiMsvCxifXLqgB5Z7lbGWfVuD7Ik8bZNzJX7dzvZvkLHlvrWkR_QMYCYyo7LsYlLeeKWd15HYcQJgQG2URYhpYh2GIYEj74MB8fkCy7Y3bA:1unwvF:G1QpNjOUtsQbrwQDi1H8dqPZr5pEs1911d2kvRAkGVw",
+        "expire_date": "2025-09-01T10:17:01.529Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3ot2oxb7ghxv4jeiokuwz8plrpvw82b5",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAUBO_iGlmx_fyjpOcM1vojHEC2FCcV4u4QKQW0OzP7YgHbWsM2yhLmzM7Ms9PvFpEepe0g39Funafe1mWOfFf4QQe_9lyel8P9O6gY9VuTSh4k4b0wMFbIkgmTcBCedAGiIKt9MTlrUIpCKqeshpRmImeVZu8P0CI23Q:1us4yw:jXEI8ahug_0DtfT-GZaIix_ejEImsZi6k7gq2s4lzH8",
+        "expire_date": "2025-09-12T19:41:54.490Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "88kw2fupv8mq9evnr3pjl0f51prtqyjd",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe_StWlgKO3o0j1naGamU4saSCisjHdXEha6_e-9_zKRtrXEreoSx2QupjWn341JHjrtIN1pus1W5mldRra7Yg9a7TAnfV4P9--gUC3fmjBn4a4HCdC16kF8r8KoJE48Y-vQkwuBQLHL3DCcg3hqAmTE3mXz_gD-Ljg7:1uruyO:_uRhQUOPCZ-ZqC0NsFBjTHcrtvcOBZ8OZoXuppa7_Oc",
+        "expire_date": "2025-09-12T09:00:40.267Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "d6i0eqm9l1rjc2jeb4c91j0sh49zqk0p",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAUBO_iGlmx_fyjpOcM1vojHEC2FCcV4u4QKQW0OzP7YgHbWsM2yhLmzM7Ms9PvFpEepe0g39Funafe1mWOfFf4QQe_9lyel8P9O6gY9VuTSh4k4b0wMFbIkgmTcBCedAGiIKt9MTlrUIpCKqeshpRmImeVZu8P0CI23Q:1us4yw:jXEI8ahug_0DtfT-GZaIix_ejEImsZi6k7gq2s4lzH8",
+        "expire_date": "2025-09-12T19:41:54.442Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lmyxi7660h5l3iq1ig31ch08ywwdjvau",
+    "fields": {
+        "session_data": ".eJxVjE0OgyAYBe_CuiEICH5ddu8ZyOOv2DaYiK6a3r2auGi3b2bemzlsa3FbS4ubIrsyyS6_m0d4pnqA-EC9zzzMdV0mzw-Fn7TxcY7pdTvdv4OCVvbaRNVLQ1ZhUKRlpzN1UGIwFjLbLJS2REgBQWSfSVMvPfIukgC8NuzzBbh1N0k:1uqbXU:OPV60cL6B5l1tVQRXvJabEQDoufDvtlKGiYqJ6sI7JU",
+        "expire_date": "2025-09-08T18:03:28.828Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "obs479g920bk7byua2ll4nb1do7kiqai",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAUBO_iGlmx_fyjpOcM1vojHEC2FCcV4u4QKQW0OzP7YgHbWsM2yhLmzM7Ms9PvFpEepe0g39Funafe1mWOfFf4QQe_9lyel8P9O6gY9VuTSh4k4b0wMFbIkgmTcBCedAGiIKt9MTlrUIpCKqeshpRmImeVZu8P0CI23Q:1urw2j:8ghlhnRfuHkjwDEAlk2FMs3z6S6PwbTzEpvGEzSA77w",
+        "expire_date": "2025-09-12T10:09:13.684Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "r2u84hzk020f87moxau2g41o52t5sbt8",
+    "fields": {
+        "session_data": ".eJxVi7sOwjAMAP8lM6oa52UYkfiOyDaOElE6kBYGxL9TJAbYTne6p8m0LjWvXW-5nc3BWLP7dUxy0fkTWm0y5Su1ebg3ffThtPF0_Pa_qVKv20FYirALIAmc1QgSgwqjkniJjNZjJJ8SgaIrPDLsk0QaExTE4It5vQEj_jPA:1us4Ru:SI7jMyWAbipa4n9AEVs63iRqZalQCrfDM9PqKaNGyXk",
+        "expire_date": "2025-09-12T19:07:46.518Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vc60s1gbovpqek5djjz1h96dcocnq7ft",
+    "fields": {
+        "session_data": ".eJxVi7sOwjAMAP8lM6oa52UYkfiOyDaOElE6kBYGxL9TJAbYTne6p8m0LjWvXW-5nc3BWLP7dUxy0fkTWm0y5Su1ebg3ffThtPF0_Pa_qVKv20FYirALIAmc1QgSgwqjkniJjNZjJJ8SgaIrPDLsk0QaExTE4It5vQEj_jPA:1urHMk:za8F0Z9xi77NYQMQ2egK7OxSnF6Ap94S6Q2USWuS99M",
+        "expire_date": "2025-09-10T14:43:10.918Z"
+    }
+},
+{
+    "model": "ihicl_main.contactsubmission",
+    "pk": 1,
+    "fields": {
+        "name": "Afeez Dayo Adedotun",
+        "email": "adedotunafeez97@gmail.com",
+        "phone": "08164480451",
+        "subject": "General Inquiry",
+        "message": "hello",
+        "submitted_at": "2025-08-19T11:46:12.162Z"
+    }
+},
+{
+    "model": "ihicl_main.contactsubmission",
+    "pk": 2,
+    "fields": {
+        "name": "Afeez Dayo Adedotun",
+        "email": "adedotunafeez97@gmail.com",
+        "phone": "08164480451",
+        "subject": "General Inquiry",
+        "message": "tell me what is going on",
+        "submitted_at": "2025-08-29T13:24:44.375Z"
+    }
+},
+{
+    "model": "ihicl_main.nextofkin",
+    "pk": 1,
+    "fields": {
+        "investor": 2,
+        "full_name": "Afeez Dayo Adedotun",
+        "relationship": "brother",
+        "email": "adedotunafeez05@gmail.com",
+        "phone": "08164480451",
+        "address": "no 32 ilupeju street osogbo",
+        "created_at": "2025-08-27T08:39:09.786Z",
+        "updated_at": "2025-08-27T15:09:55.303Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add FAQ",
+        "content_type": [
+            "ihicl_main",
+            "faq"
+        ],
+        "codename": "add_faq"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change FAQ",
+        "content_type": [
+            "ihicl_main",
+            "faq"
+        ],
+        "codename": "change_faq"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete FAQ",
+        "content_type": [
+            "ihicl_main",
+            "faq"
+        ],
+        "codename": "delete_faq"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view FAQ",
+        "content_type": [
+            "ihicl_main",
+            "faq"
+        ],
+        "codename": "view_faq"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add investment sector",
+        "content_type": [
+            "ihicl_main",
+            "investmentsector"
+        ],
+        "codename": "add_investmentsector"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change investment sector",
+        "content_type": [
+            "ihicl_main",
+            "investmentsector"
+        ],
+        "codename": "change_investmentsector"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete investment sector",
+        "content_type": [
+            "ihicl_main",
+            "investmentsector"
+        ],
+        "codename": "delete_investmentsector"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view investment sector",
+        "content_type": [
+            "ihicl_main",
+            "investmentsector"
+        ],
+        "codename": "view_investmentsector"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add team member",
+        "content_type": [
+            "ihicl_main",
+            "teammember"
+        ],
+        "codename": "add_teammember"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change team member",
+        "content_type": [
+            "ihicl_main",
+            "teammember"
+        ],
+        "codename": "change_teammember"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete team member",
+        "content_type": [
+            "ihicl_main",
+            "teammember"
+        ],
+        "codename": "delete_teammember"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view team member",
+        "content_type": [
+            "ihicl_main",
+            "teammember"
+        ],
+        "codename": "view_teammember"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add testimonial",
+        "content_type": [
+            "ihicl_main",
+            "testimonial"
+        ],
+        "codename": "add_testimonial"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change testimonial",
+        "content_type": [
+            "ihicl_main",
+            "testimonial"
+        ],
+        "codename": "change_testimonial"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete testimonial",
+        "content_type": [
+            "ihicl_main",
+            "testimonial"
+        ],
+        "codename": "delete_testimonial"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view testimonial",
+        "content_type": [
+            "ihicl_main",
+            "testimonial"
+        ],
+        "codename": "view_testimonial"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add investment opportunity",
+        "content_type": [
+            "ihicl_main",
+            "investmentopportunity"
+        ],
+        "codename": "add_investmentopportunity"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change investment opportunity",
+        "content_type": [
+            "ihicl_main",
+            "investmentopportunity"
+        ],
+        "codename": "change_investmentopportunity"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete investment opportunity",
+        "content_type": [
+            "ihicl_main",
+            "investmentopportunity"
+        ],
+        "codename": "delete_investmentopportunity"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view investment opportunity",
+        "content_type": [
+            "ihicl_main",
+            "investmentopportunity"
+        ],
+        "codename": "view_investmentopportunity"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add contact submission",
+        "content_type": [
+            "ihicl_main",
+            "contactsubmission"
+        ],
+        "codename": "add_contactsubmission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change contact submission",
+        "content_type": [
+            "ihicl_main",
+            "contactsubmission"
+        ],
+        "codename": "change_contactsubmission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete contact submission",
+        "content_type": [
+            "ihicl_main",
+            "contactsubmission"
+        ],
+        "codename": "delete_contactsubmission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view contact submission",
+        "content_type": [
+            "ihicl_main",
+            "contactsubmission"
+        ],
+        "codename": "view_contactsubmission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add investor profile",
+        "content_type": [
+            "ihicl_main",
+            "investorprofile"
+        ],
+        "codename": "add_investorprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change investor profile",
+        "content_type": [
+            "ihicl_main",
+            "investorprofile"
+        ],
+        "codename": "change_investorprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete investor profile",
+        "content_type": [
+            "ihicl_main",
+            "investorprofile"
+        ],
+        "codename": "delete_investorprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view investor profile",
+        "content_type": [
+            "ihicl_main",
+            "investorprofile"
+        ],
+        "codename": "view_investorprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add transaction",
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "codename": "add_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change transaction",
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "codename": "change_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete transaction",
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "codename": "delete_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view transaction",
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "codename": "view_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add investment",
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "codename": "add_investment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change investment",
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "codename": "change_investment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete investment",
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "codename": "delete_investment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view investment",
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "codename": "view_investment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add next of kin",
+        "content_type": [
+            "ihicl_main",
+            "nextofkin"
+        ],
+        "codename": "add_nextofkin"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change next of kin",
+        "content_type": [
+            "ihicl_main",
+            "nextofkin"
+        ],
+        "codename": "change_nextofkin"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete next of kin",
+        "content_type": [
+            "ihicl_main",
+            "nextofkin"
+        ],
+        "codename": "delete_nextofkin"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view next of kin",
+        "content_type": [
+            "ihicl_main",
+            "nextofkin"
+        ],
+        "codename": "view_nextofkin"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add statement request",
+        "content_type": [
+            "ihicl_main",
+            "statementrequest"
+        ],
+        "codename": "add_statementrequest"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change statement request",
+        "content_type": [
+            "ihicl_main",
+            "statementrequest"
+        ],
+        "codename": "change_statementrequest"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete statement request",
+        "content_type": [
+            "ihicl_main",
+            "statementrequest"
+        ],
+        "codename": "delete_statementrequest"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view statement request",
+        "content_type": [
+            "ihicl_main",
+            "statementrequest"
+        ],
+        "codename": "view_statementrequest"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$BfzB5HvlEo4b55ZMSuBUFg$CH7t8J50vbCJTDNaacsQXhSx8VVMvHZVhKEViJBz0E0=",
+        "last_login": "2025-08-29T19:35:18.701Z",
+        "is_superuser": true,
+        "username": "adedotun",
+        "first_name": "Afeez",
+        "last_name": "Adedotun",
+        "email": "adedotunafeez97@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-08-18T10:07:19.892Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$zuEuMmivT4ID9TLf5wjjtY$l3gjuLmvmWsD5e3Iu399P7VWBdCVlXmR6vlVaF1f7xM=",
+        "last_login": "2025-08-29T19:41:54.471Z",
+        "is_superuser": false,
+        "username": "adedotunafeez007@gmail.com",
+        "first_name": "adedayo",
+        "last_name": "babatunde",
+        "email": "adedotunafeez007@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-08-28T21:03:53.938Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "ihicl_main.investorprofile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "title": "Mr",
+        "other_title": "",
+        "telephone": "08164480451",
+        "address": "no 32 ilupeju street osogbo",
+        "country": "Nigeria",
+        "city": "osogbo",
+        "state": "osogbo",
+        "postal_code": "21000",
+        "newsletter_subscription": false,
+        "created_at": "2025-08-26T12:49:21.698Z",
+        "updated_at": "2025-08-28T10:47:06.131Z"
+    }
+},
+{
+    "model": "ihicl_main.investorprofile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "adedotunafeez007@gmail.com"
+        ],
+        "title": "Mr",
+        "other_title": null,
+        "telephone": "+2348164480451",
+        "address": "alarere close,oluyole",
+        "country": "NG",
+        "city": "osogbo",
+        "state": "Osun",
+        "postal_code": "230001",
+        "newsletter_subscription": true,
+        "created_at": "2025-08-28T21:03:54.626Z",
+        "updated_at": "2025-08-28T21:03:54.626Z"
+    }
+},
+{
+    "model": "ihicl_main.investment",
+    "pk": 1,
+    "fields": {
+        "investor": [
+            "adedotun"
+        ],
+        "project": null,
+        "amount": "10000.00",
+        "date_invested": "2025-08-27T19:18:57.066Z",
+        "status": "pending",
+        "current_value": "10000.00"
+    }
+},
+{
+    "model": "ihicl_main.investment",
+    "pk": 2,
+    "fields": {
+        "investor": [
+            "adedotun"
+        ],
+        "project": null,
+        "amount": "30000.00",
+        "date_invested": "2025-08-28T13:44:10.849Z",
+        "status": "completed",
+        "current_value": "0.00"
+    }
+},
+{
+    "model": "ihicl_main.investment",
+    "pk": 3,
+    "fields": {
+        "investor": [
+            "adedotun"
+        ],
+        "project": null,
+        "amount": "50000.00",
+        "date_invested": "2025-08-28T20:24:08.043Z",
+        "status": "completed",
+        "current_value": "20000.00"
+    }
+},
+{
+    "model": "ihicl_main.investment",
+    "pk": 4,
+    "fields": {
+        "investor": [
+            "adedotunafeez007@gmail.com"
+        ],
+        "project": null,
+        "amount": "20000.00",
+        "date_invested": "2025-08-28T21:03:54.634Z",
+        "status": "completed",
+        "current_value": "0.00"
+    }
+},
+{
+    "model": "ihicl_main.investment",
+    "pk": 5,
+    "fields": {
+        "investor": [
+            "adedotunafeez007@gmail.com"
+        ],
+        "project": null,
+        "amount": "10000.00",
+        "date_invested": "2025-08-29T19:43:21.242Z",
+        "status": "pending",
+        "current_value": "0.00"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "25000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T09:55:33.056Z",
+        "reference": "WD-20250829095533-7fb6ff5d",
+        "status": "pending"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "25000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T09:55:33.165Z",
+        "reference": "WD-20250829095533-dd1fc436",
+        "status": "completed"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "30000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T10:06:45.149Z",
+        "reference": "WD-20250829100645-e2d15e43",
+        "status": "pending"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "30000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T10:06:45.265Z",
+        "reference": "WD-20250829100645-3e2e50f0",
+        "status": "completed"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "adedotunafeez007@gmail.com"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "10000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T10:11:12.056Z",
+        "reference": "WD-20250829101112-819bd6b6",
+        "status": "completed"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "30000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T18:46:44.009Z",
+        "reference": "WD-20250829184644-0622e382",
+        "status": "completed"
+    }
+},
+{
+    "model": "ihicl_main.transaction",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "adedotunafeez007@gmail.com"
+        ],
+        "transaction_type": "withdrawal",
+        "amount": "10000.00",
+        "description": "Withdrawal Request",
+        "date": "2025-08-29T19:30:47.650Z",
+        "reference": "WD-20250829193047-e9e0be9e",
+        "status": "completed"
+    }
+},
+{
+    "model": "ihicl_main.statementrequest",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "request_date": "2025-08-29T13:53:18.300Z",
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "status": "pending",
+        "notes": "i want to know all my money in the investment",
+        "reference": "STMT-000001"
+    }
+},
+{
+    "model": "ihicl_main.statementrequest",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "request_date": "2025-08-29T14:27:40.201Z",
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "status": "pending",
+        "notes": "all of them",
+        "reference": "STMT-000002"
+    }
+},
+{
+    "model": "ihicl_main.statementrequest",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "request_date": "2025-08-29T14:27:40.290Z",
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "status": "pending",
+        "notes": "all of them",
+        "reference": "STMT-000003"
+    }
+},
+{
+    "model": "ihicl_main.statementrequest",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "request_date": "2025-08-29T14:29:12.025Z",
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "status": "pending",
+        "notes": "what",
+        "reference": "STMT-000004"
+    }
+},
+{
+    "model": "ihicl_main.statementrequest",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "adedotun"
+        ],
+        "request_date": "2025-08-29T14:29:12.092Z",
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "status": "pending",
+        "notes": "what",
+        "reference": "STMT-000005"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-08-27T19:18:57.071Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦1000",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-08-27T19:24:56.796Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦1000.00",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-08-27T19:40:50.912Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\", \"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-08-27T19:41:04.910Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-08-27T20:04:09.477Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-08-27T20:10:27.346Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-08-27T20:12:08.190Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-08-27T20:27:22.233Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-08-28T10:47:47.692Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investorprofile"
+        ],
+        "object_id": "3",
+        "object_repr": "kamikazi adedayo - Investor Profile",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-08-28T10:50:22.126Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "adedotunafeez05@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-08-28T10:59:27.787Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "adedotunafeez05@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-08-28T11:09:00.770Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "adedotunafeez05@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-08-28T13:48:41.290Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-08-28T13:49:26.695Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-08-28T13:49:40.800Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-08-28T13:49:46.468Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-08-28T13:52:08.881Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-08-28T13:52:14.591Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-08-28T13:52:58.602Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-08-28T13:53:14.893Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-08-28T13:57:51.936Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-08-28T14:17:40.246Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-08-28T14:18:35.709Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - General Investment - ₦10000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-08-28T20:28:29.090Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investorprofile"
+        ],
+        "object_id": "6",
+        "object_repr": "kamikazi adedayo - Investor Profile",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-08-28T20:28:53.406Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "adedotunafeez05@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-08-28T20:29:32.727Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotunafeez007@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-08-28T21:02:39.285Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "8",
+        "object_repr": "adedotunafeez007@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-08-29T09:32:56.487Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-08-29T09:34:44.764Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-08-29T09:35:33.509Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-08-29T09:44:08.616Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-08-29T09:45:47.138Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-08-29T09:45:47.229Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-08-29T09:48:55.551Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-08-29T09:49:04.544Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-08-29T09:50:10.878Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - pending",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-08-29T09:50:10.969Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - pending",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-08-29T09:51:05.008Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "1",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - pending",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-08-29T09:51:44.014Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-08-29T09:51:54.323Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-08-29T09:52:37.023Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-08-29T09:53:10.275Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-08-29T09:55:06.453Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-08-29T09:55:06.561Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-08-29T09:56:22.213Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-08-29T09:56:22.304Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-08-29T09:56:27.542Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - withdrawal - ₦25000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-08-29T09:58:25.479Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2025-08-29T09:58:25.594Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2025-08-29T09:58:45.727Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2025-08-29T09:58:45.820Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2025-08-29T10:01:51.038Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2025-08-29T10:02:38.049Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2025-08-29T10:04:49.184Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2025-08-29T10:04:57.575Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "2",
+        "object_repr": "adedotun - General Investment - ₦30000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2025-08-29T10:05:48.449Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "3",
+        "object_repr": "adedotun - General Investment - ₦50000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Current value\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2025-08-29T10:07:38.914Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "5",
+        "object_repr": "adedotun - withdrawal - ₦30000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2025-08-29T10:10:15.717Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "4",
+        "object_repr": "adedotunafeez007@gmail.com - General Investment - ₦20000.00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2025-08-29T10:10:20.795Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "investment"
+        ],
+        "object_id": "4",
+        "object_repr": "adedotunafeez007@gmail.com - General Investment - ₦20000.00",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2025-08-29T10:12:32.418Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "6",
+        "object_repr": "adedotunafeez007@gmail.com - withdrawal - ₦10000.00 - completed",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2025-08-29T19:08:15.998Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "9",
+        "object_repr": "adedotunafeez007@gmail.com - withdrawal - ₦10000.00 - pending",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2025-08-29T19:08:15.998Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "8",
+        "object_repr": "adedotunafeez007@gmail.com - withdrawal - ₦10000.00 - pending",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2025-08-29T19:29:15.129Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "11",
+        "object_repr": "adedotunafeez007@gmail.com - withdrawal - ₦10000.00 - pending",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2025-08-29T19:29:15.129Z",
+        "user": [
+            "adedotun"
+        ],
+        "content_type": [
+            "ihicl_main",
+            "transaction"
+        ],
+        "object_id": "10",
+        "object_repr": "adedotunafeez007@gmail.com - withdrawal - ₦10000.00 - pending",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]
